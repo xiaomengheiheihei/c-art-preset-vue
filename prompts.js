@@ -1,7 +1,7 @@
 module.exports = [{
   type: 'list',
   name: 'template',
-  message: '请选择 uni-app 模板',
+  message: '请选择 c-art 模板',
   choices: [{
     name: '默认模板',
     value: 'default'
@@ -11,7 +11,7 @@ module.exports = [{
     value: 'default-ts'
   },
   {
-    name: 'Hello uni-app',
+    name: 'Hello c-art',
     value: 'dcloudio/hello-uniapp'
   },
   {
@@ -37,13 +37,13 @@ module.exports = [{
   when: answers => answers.template === 'custom',
   type: 'input',
   name: 'repo',
-  message: '请输入自定义 uni-app 模板地址',
+  message: '请输入自定义 c-art模板地址',
   filter (input) {
     return new Promise(function (resolve, reject) {
       if (input) {
         resolve(input)
       } else {
-        reject(new Error('uni-app 模板地址不能为空'))
+        reject(new Error('c-art 模板地址不能为空'))
       }
     })
   }

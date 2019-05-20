@@ -8,7 +8,7 @@ module.exports = [{
   }
   ],
   default: 'None'
-},
+}
 // {
 //   when: answers => answers.template === 'custom',
 //   type: 'input',

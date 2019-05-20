@@ -1,0 +1,12 @@
+.yarn-integrity
+.bin/
+.npmignore
+*.yml
+*.jshintrc
+.eslintrc.json
+*.markdown
+Makefile
+test/
+LICENSE
+license
+LICENSE.MIT

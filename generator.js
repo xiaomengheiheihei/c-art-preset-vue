@@ -32,10 +32,6 @@ async function generate (dir, files, base = '', rootOptions = {}) {
 }
 
 module.exports = (api, options, rootOptions) => {
-  const ora = require('ora')
-  ora('1111');
-  ora(JSON.stringify(rootOptions))
-  console.log(1111)
   api.extendPackage(pkg => {
     return {
       dependencies: {
@@ -103,7 +99,9 @@ module.exports = (api, options, rootOptions) => {
 
       const spinner = ora('模板下载中...')
       spinner.start()
+
       const tmp = path.join(home, '.uni-app/templates', template.replace(/[/:]/g, '-'), 'src')
+
       if (fs.existsSync(tmp)) {
         try {
           require('rimraf').sync(tmp)

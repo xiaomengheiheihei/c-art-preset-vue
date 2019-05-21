@@ -33,6 +33,9 @@ async function generate (dir, files, base = '', rootOptions = {}) {
 
 module.exports = (api, options, rootOptions) => {
   api.extendPackage(pkg => {
+    ora(JSON.stringify(pkg))
+    ora(JSON.stringify(options))
+    ora(JSON.stringify(rootOptions))
     return {
       dependencies: {
         'regenerator-runtime': '^0.12.1'// 锁定版本，避免高版本在小程序中出错
@@ -99,9 +102,9 @@ module.exports = (api, options, rootOptions) => {
 
       const spinner = ora('模板下载中...')
       spinner.start()
-
+      ora(JSON.stringify(home))
       const tmp = path.join(home, '.uni-app/templates', template.replace(/[/:]/g, '-'), 'src')
-
+      ora(JSON.stringify(tmp))
       if (fs.existsSync(tmp)) {
         try {
           require('rimraf').sync(tmp)

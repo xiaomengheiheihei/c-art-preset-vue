@@ -2,6 +2,7 @@
     "useConfigFiles": false,
     "plugins": {
         "c-art-plugin": {},
+        "@dcloudio/vue-cli-plugin-uni": {},
         "@vue/cli-plugin-babel": {
             "version": "3.5.1",
             "presets": [

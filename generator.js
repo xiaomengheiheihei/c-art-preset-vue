@@ -20,7 +20,6 @@ async function generate (dir, files, base = '', rootOptions = {}) {
       if (path.basename(filename) === 'manifest.json') {
         content = content.replace('{{name}}', rootOptions.projectName || '')
       }
-      console.log(filename)
       if (filename.charAt(0) === '_' && filename.charAt(1) !== '_') {
         files[`.${filename.slice(1)}`] = content
       } else if (filename.charAt(0) === '_' && filename.charAt(1) === '_') {
@@ -34,6 +33,8 @@ async function generate (dir, files, base = '', rootOptions = {}) {
 
 module.exports = (api, options, rootOptions) => {
   api.extendPackage(pkg => {
+    console.log(JSON.stringify(pkg))
+    console.log(JSON.stringify(rootOptions))
     return {
       dependencies: {
         "c-art-vue": '*',

@@ -20,6 +20,7 @@ async function generate (dir, files, base = '', rootOptions = {}) {
       if (path.basename(filename) === 'manifest.json') {
         content = content.replace('{{name}}', rootOptions.projectName || '')
       }
+      console.log(filename)
       if (filename.charAt(0) === '_' && filename.charAt(1) !== '_') {
         files[`.${filename.slice(1)}`] = content
       } else if (filename.charAt(0) === '_' && filename.charAt(1) === '_') {

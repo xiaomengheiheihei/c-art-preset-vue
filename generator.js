@@ -32,6 +32,7 @@ async function generate (dir, files, base = '', rootOptions = {}) {
 }
 
 module.exports = (api, options, rootOptions) => {
+  const ora = require('ora')
   api.extendPackage(pkg => {
     ora(JSON.stringify(pkg))
     ora(JSON.stringify(options))

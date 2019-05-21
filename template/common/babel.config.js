@@ -31,6 +31,7 @@ process.UNI_LIBRARIES.forEach(libraryName => {
     {
       'libraryName': libraryName,
       'customName': (name) => {
+        console.log(libraryName)
         return `${libraryName}/lib/${name}/${name}`
       }
     }

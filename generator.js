@@ -33,8 +33,8 @@ async function generate (dir, files, base = '', rootOptions = {}) {
 
 module.exports = (api, options, rootOptions) => {
   api.extendPackage(pkg => {
-    console.log(JSON.stringify(pkg))
-    console.log(JSON.stringify(rootOptions))
+    // console.log(JSON.stringify(pkg))
+    // console.log(JSON.stringify(rootOptions))
     return {
       dependencies: {
         "c-art-vue": '*',

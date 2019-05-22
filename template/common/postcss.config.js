@@ -7,6 +7,6 @@ module.exports = {
       browsers: pkg.browserslist,
       remove: process.env.UNI_PLATFORM !== 'h5'
     }),
-    require('@dcloudio/vue-cli-plugin-uni/packages/postcss')
+    require('c-art-plugin/packages/postcss')
   ]
 }

@@ -5,7 +5,7 @@ module.exports = {
     require('postcss-import'),
     require('autoprefixer')({
       browsers: pkg.browserslist,
-      remove: process.env.UNI_PLATFORM !== 'h5'
+      remove: process.env.C_PLATFORM !== 'h5'
     }),
     require('c-art-plugin/packages/postcss')
   ]

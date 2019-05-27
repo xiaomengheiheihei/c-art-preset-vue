@@ -12,7 +12,7 @@ module.exports = [{
   },
   {
     name: 'Hello c-art',
-    value: 'dcloudio/hello-uniapp'
+    value: 'xiaomengheiheihei/hello-c-art'
   },
   {
     name: '登录模板',

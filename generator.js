@@ -31,6 +31,9 @@ async function generate (dir, files, base = '', rootOptions = {}) {
   })
 }
 
+const TXT = String(require('fs-extra').readFileSync(require('path').resolve(__dirname, 'cart.txt')))
+console.log(require('chalk').rgb(255, 20, 147)(TXT))
+
 module.exports = (api, options, rootOptions) => {
   api.extendPackage(pkg => {
     // console.log(JSON.stringify(pkg))

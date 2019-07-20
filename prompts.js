@@ -10,10 +10,10 @@ module.exports = [{
   //   name: '默认模板(TypeScript)',
   //   value: 'default-ts'
   // },
-  // {
-  //   name: 'Hello c-art',
-  //   value: 'xiaomengheiheihei/hello-c-art'
-  // },
+  {
+    name: '狮子座单页模板',
+    value: 'xiaomengheiheihei/c-art-template-leonidmanager'
+  },
   // {
   //   name: '登录模板',
   //   value: 'dcloudio/uni-template-login'

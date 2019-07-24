@@ -91,7 +91,7 @@ module.exports = (api, options, rootOptions) => {
 
     const template = options.repo || options.template
 
-    const base = 'src'
+    let base = 'src'
 
     if (template === 'default') {
       await generate(path.resolve(__dirname, './template/default'), files, base, rootOptions)
@@ -106,7 +106,8 @@ module.exports = (api, options, rootOptions) => {
       const spinner = ora('模板下载中...')
       spinner.start()
 
-      const tmp = path.join(home, '.uni-app/templates', template.replace(/[/:]/g, '-'), 'src')
+
+      const tmp = path.join(home, '.c-art/templates', template.replace(/[/:]/g, '-'), 'src')
 
       if (fs.existsSync(tmp)) {
         try {
@@ -125,6 +126,10 @@ module.exports = (api, options, rootOptions) => {
           resolve()
         })
       })
+
+      if (template === 'xiaomengheiheihei/c-art-template-leonidmanager') {
+        base = ''
+      }
 
       await generate(tmp, files, base)
     }

@@ -71,5 +71,8 @@
 		"setting": {
 			"urlCheck": false
 		}
+	},
+	"h5": {
+		"isEjs": false
 	}
 }
